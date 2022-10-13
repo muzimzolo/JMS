@@ -14,4 +14,7 @@
     <artifact name="fault" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/fault.xml</file>
     </artifact>
+    <artifact name="jms_inbound" groupId="com.example.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/jms_inbound.xml</file>
+    </artifact>
 </artifacts>
