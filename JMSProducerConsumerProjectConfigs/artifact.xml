@@ -5,4 +5,7 @@
     <artifact name="RegisterDoctorInSequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/RegisterDoctorInSequence.xml</file>
     </artifact>
+    <artifact name="AddDoctorSequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/AddDoctorSequence.xml</file>
+    </artifact>
 </artifacts>

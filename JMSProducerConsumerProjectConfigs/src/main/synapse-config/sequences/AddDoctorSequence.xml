@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="AddDoctorSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property name="query" value="*************Receiving Doctor Details *********CCBY4.0"/>
+    </log>
+    <property expression="json-eval($.hospital)" name="hospital" scope="default" type="STRING"/>
+    <switch source="$ctx:hospital">
+        <case regex="grand oak community hospital">
+            <property name="uri.var.hospital.name" scope="default" type="STRING" value="grandoaks"/>
+        </case>
+        <case regex="clemency medical center">
+            <property name="uri.var.hospital.name" scope="default" type="STRING" value="clemency"/>
+        </case>
+        <case regex="pine valley community hospital">
+            <property name="uri.var.hospital.name" scope="default" type="STRING" value="pinevalley"/>
+        </case>
+        <case regex="willow gardens general hospital">
+            <property name="uri.var.hospital.name" scope="default" type="STRING" value="willowgardens"/>
+        </case>
+        <default>
+            <payloadFactory media-type="json">
+                <format>{"Status":"Invalid hospital name"}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </default>
+    </switch>
+    <call>
+        <endpoint key="addDoctorEP"/>
+    </call>
+    <log level="full"/>
+</sequence>
