@@ -17,4 +17,7 @@
     <artifact name="jms_inbound" groupId="com.example.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/inbound-endpoints/jms_inbound.xml</file>
     </artifact>
+    <artifact name="HospitalServiceApi" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/HospitalServiceApi.xml</file>
+    </artifact>
 </artifacts>
